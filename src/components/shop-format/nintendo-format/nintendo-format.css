@@ -1,0 +1,6 @@
+.nintendo-format-container{
+    background-image: url('/src/assets/images/nintendo-fade.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 110%;
+}

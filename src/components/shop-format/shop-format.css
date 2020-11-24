@@ -1,0 +1,43 @@
+
+.shop-format-func-container{
+    background-color:#24262c;
+    height: 40vh;
+    padding-top: 22%;
+    position: relative;
+    z-index: 0;
+
+    
+}
+.shop-format-buttons{
+    /* border-bottom: 2px solid rgba(255,255,255, 0.3); */
+    padding: 0 5px 0 0;
+    position: absolute;
+    top: 60%;
+    z-index: 1;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+}
+.shop-formats{
+    height: 100%;
+    float: right;
+    width: 100%;
+}
+.format-text{
+    padding: 0 5px 0 0;
+    position: absolute;
+    top: 68%;
+    left: 7%;
+    width: 25%;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 150%;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+

@@ -1,0 +1,27 @@
+.view-more-releases{
+    position: relative;
+    right: -55%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px ;
+    cursor: pointer;
+    display: inline-block;
+}
+.view-more-format{
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ffffff;
+    padding: 7px;
+    border-radius: 10px ;
+    cursor: pointer;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    margin-top: 10px;
+}

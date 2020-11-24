@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.login-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.login-item{
+    padding: 5px 10px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.login-image{
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    border-radius: 50px;
+    
+}
+#login-image{
+    border: 1px solid #ffffff;
+}
+.login-text{
+    margin-left: 10px;
+}
+.cart{
+    position: relative;
+    z-index: 1;
+}
+.notiffication{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: red;
+    border-radius: 20px;
+    text-align: center;
+    right: 55px;
+    top: 8px;
+    z-index: 2;
+    font-size: 9px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}

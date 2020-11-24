@@ -1,0 +1,21 @@
+.playstation-format-container{
+    height: 110%;
+    background-size: contain;
+    /* background: linear-gradient(
+        0deg, rgba(36,38,44,1) 0%, rgba(36,38,44,0.8463760504201681) 14%, rgba(36,38,44,0) 49%, rgba(36,38,44,0.8939950980392157) 88%, rgba(36,38,44,1) 100%  ),url('/src/assets/images/playstation-background.png'); */
+    background-image: url('/src/assets/images/playstation-background.png');
+}
+.card-holder{
+    float: right;
+    margin-top:8%;
+    width: 60%;
+    
+}
+.top-ps-banner{
+    position: relative;
+    top: 0;
+    height: 30px;
+    background-color: #073b78;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

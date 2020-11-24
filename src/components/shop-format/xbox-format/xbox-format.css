@@ -1,0 +1,14 @@
+.xbox-format-container{
+    background-image: url('/src/assets/images/xbox-fade.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 110%;
+}
+.top-xb-banner{
+    position: relative;
+    top: 0;
+    height: 30px;
+    background-color: #073b78;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

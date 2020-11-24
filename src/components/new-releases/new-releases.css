@@ -1,0 +1,23 @@
+.new-releases-container{
+    background-color: #24262c;
+    margin-top: -1%;
+
+}
+.releases-slider{
+  
+   width: 90%;
+   float: right;
+   z-index: 3;
+
+}.new-releases-headline{
+    /* float: left; */
+    left: 0;
+    position: relative;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.jumbotron-btn-class{
+    background-color: #d81f26;
+    color: #ffffff;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.cart-button{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.btn-container{
+    width: 150px;
+}
+.release-button{
+    background-color: #d81f26;
+    color: #ffffff;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.release-cart{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}

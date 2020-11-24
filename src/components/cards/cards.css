@@ -1,0 +1,11 @@
+.cards-container{
+    background-color: #24262c;
+    width: 100%;
+    z-index: 3;
+}
+.slider{
+    width: 90%;
+    position: absolute;
+    top: -200px;
+    float: right;
+}

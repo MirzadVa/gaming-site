@@ -1,0 +1,14 @@
+.low-component-container{
+    border-top: 1px solid #6b6c70;
+    border-bottom: 1px solid #6b6c70;
+    height: 100%;
+    color: white;
+}
+.links-container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

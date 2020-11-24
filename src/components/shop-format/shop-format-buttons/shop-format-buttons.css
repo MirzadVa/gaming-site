@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+.btn-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.format-button{
+    background-color:transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    
+
+}
+
+.ps-store-img{
+    height: 30px;
+    width: 50px;
+}
+.xbox-logo-img{
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+.nintedno-logo-img{
+    height: 30px;
+    width: 30px;
+    opacity: 0.5;
+}
+.playstation-store{
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin-right: 5px;
+    opacity: 0.5;
+}
+.store{
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.7;
+}
+.xbox-name{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    opacity: 0.5;
+    font-weight: bold;
+}
