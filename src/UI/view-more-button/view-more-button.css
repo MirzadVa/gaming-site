@@ -13,6 +13,9 @@
     display: inline-block;
 }
 .view-more-format{
+    position: absolute;
+    left: 7%;
+    bottom: 10%;
     color: #ffffff;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;

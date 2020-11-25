@@ -39,7 +39,7 @@ function ShopFormatFunc(props){
                 <div className='format-text'>
                     <p>Nulla voluptate dolor laborum nulla reprehenderit. Duis excepteur incididunt incididunt ea. 
                         Aute commodo id aliquip culpa.</p>
-                    <ViewMoreButton class='view-more-format'/>
+                    
                 </div>
                 
                 <div className='shop-formats'>

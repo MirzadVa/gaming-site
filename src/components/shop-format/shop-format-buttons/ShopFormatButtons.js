@@ -35,7 +35,7 @@ const ShopFormatButtons = (props) => {
         <div className='btn-container'>
                     <div onClick={props.playstation} className='format-button'>
                         <img src={PsStore} className='ps-store-img'/>
-                        <span className='playstation-store' style={OpacityPlay ? style : null} onClick={opacityPlay}>PlayStation </span><span className='store'> Store</span>
+                        <span className='playstation-store' style={OpacityPlay ? style : null} onClick={opacityPlay}>PlayStation <span className='store'> Store</span></span>
                     </div>
                     
                     
