@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from 'react-router-dom';
+import ViewMoreButton from '../../UI/view-more-button/ViewMoreButton';
 
 const Cards = (props) => {
 
@@ -36,7 +37,8 @@ const Cards = (props) => {
     
       return (
         <div>
-          
+          <h2 className='preorders'>Preorders</h2>
+          <Link to='/preorders'><ViewMoreButton class='view-more-preorders'/></Link>
           <div className='cards-container'>
               
             {slider}

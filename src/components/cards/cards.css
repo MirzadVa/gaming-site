@@ -9,3 +9,15 @@
     top: -200px;
     float: right;
 }
+.preorders{
+    position: absolute;
+    color: white;
+    top: 70%;
+    left: 10%;
+    color: #ffffff;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    display: inline-block;
+
+}

@@ -25,3 +25,19 @@
     text-align: center;
     margin-top: 10px;
 }
+.view-more-preorders{
+    position: absolute;
+    top: 70%;
+    right: 6%;
+    color: #ffffff;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px ;
+    cursor: pointer;
+    display: inline-block;
+    /* width: 80px; */
+    text-align: center;
+    margin-top: 10px;
+}

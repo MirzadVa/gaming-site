@@ -24,7 +24,7 @@ const NewReleases = (props) => {
       if(props.games.length > 0) {
           releaseCard = (
                 
-                <Slider {...settings} className='releases-slider'>
+            <Slider {...settings} className='releases-slider'>
                 
                 {props.games.map(game => {
                     return (<Link style={{ textDecoration: 'none' }} key={game.id} to={`/game/${game.id}`}>

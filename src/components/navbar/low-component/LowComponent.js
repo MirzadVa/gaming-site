@@ -5,18 +5,33 @@ import MyLink from './my-link/MyLink';
 
 const LowComponent = () =>{
 
+    const style={textDecoration: 'none', color: 'white'}
+
     return(
         <div className='low-component-container'>
             <div className='links-container'>
-                <Link to={'/'}>
+                <Link to={'/'} style={style}>
                     <MyLink name='HOME' />
                 </Link>
+
                 <MyLink name='DIGITAL DOWNLOAD'/>
-                <MyLink name='PRE ORDERS'/>
-                <MyLink name='NEW RELEASES'/>
-                <MyLink name='PS4'/>
-                <MyLink name='XBOX ONE'/>
-                <MyLink name='NINTENDO'/>
+
+                <Link to='/preorders' style={style}>
+                    <MyLink name='PRE ORDERS'/>
+                </Link>
+                
+                <Link to='/playstation-store' style={style}>
+                    <MyLink name='PS4'/>
+                </Link>
+
+                <Link to='/xbox-one' style={style}>
+                    <MyLink name='XBOX ONE'/>
+                </Link>
+
+                <Link to='/nintendo' style={style}>
+                    <MyLink name='NINTENDO'/>
+                </Link>
+                
                 <MyLink name='CONSOLES & ACCESSORIES'/>
                 <MyLink name='APEX COINS'/>
             </div>
