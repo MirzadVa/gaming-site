@@ -1,5 +1,6 @@
 import Axios from 'axios';
 import React, { Component } from 'react';
+import SingleProductPageFunc from '../../components/single-product-page-func/SingleProductPageFunc';
 
 class SingleProductPageClass extends Component  {
     state = {
@@ -12,8 +13,6 @@ class SingleProductPageClass extends Component  {
                 this.setState({
                     game : result.data
                 })
-                
-                // console.log(result.data)
             })
             .catch(error => console.log(error))
             
@@ -24,7 +23,7 @@ class SingleProductPageClass extends Component  {
         let data;
         if(this.state.game != null){
             data = (
-            <h1>{this.state.game.name}</h1>
+                <h1><SingleProductPageFunc data={this.state.game}/></h1>
             )
         }else{
             data = (<h1>Loading</h1>)

@@ -1,0 +1,49 @@
+.buy-qty{
+    margin-left: 40px;
+    margin-top: 3%;
+}
+.quantity{
+    border: none;
+    background-color: #24262c;
+    border: 1px solid #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.quantity[type="number"]
+{   
+    appearance: textfield;
+    font-size:15px;
+}
+.buy-game{
+    height: 40px;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    background-color: #d81f26;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+.qty-label{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+}
+

@@ -1,0 +1,46 @@
+.input-field{
+    margin: 5px 0;
+    width: 250px;
+    background-color: #B5B5B5;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 5px;
+
+}
+.label-field{
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.input-field:focus{
+    outline: none;
+    font-size: 14px;
+}
+.input-field::placeholder{
+    color: #000000;
+    font-weight: lighter;
+    opacity: 0.5;
+    font-size: 12px;
+    margin-left: 20px;
+}
+.input-field-select{
+    width: 100px;
+    background-color: #B5B5B5;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 30px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 20px
+
+}
