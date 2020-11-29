@@ -1,0 +1,24 @@
+.login-page-container{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #24262C;
+}
+.login-page-container > input:nth-child(2){
+    color: red;
+}
+.bad-email{
+    font-family: 'Roboto', 'sans-serif';
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 10px;
+
+}
+.login-btn{
+    margin-top: 30px;
+}
+.bad-mail-cont{
+    
+}

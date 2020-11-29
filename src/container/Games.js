@@ -28,7 +28,6 @@ class Games extends Component {
         return(
             <div>
                 <Cards games={this.state.games}/>
-                
             </div>
             
             

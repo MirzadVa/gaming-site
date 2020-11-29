@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+.search-container{
+    border: 1px solid #fcfcfc;
+    height: 35px;
+    border-radius: 10px;
+    color: #fcfcfc;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    
+}
+.search-input{
+    border: none;
+    height: 30px;
+    border-radius: 5px;
+    color: #fcfcfc;
+    font-size: 11px;
+    border-left: 1px solid #fcfcfc;
+    border-radius: 0;
+    background-color: #24252b;
+    padding-left: 10px;
+
+    
+}
+.search-input::placeholder{
+    color: #fcfcfc;
+    opacity: 0.5;
+
+}
+.search-button{
+    color: #ffffff;
+    background-color: #fb0000;
+    height: 100%;
+    width: 100px;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    
+    
+
+}
+textarea:focus, input:focus{
+    outline: none;
+    font-size: 11px;
+    
+}
+.select-genre{
+    width: 5%;
+    font-size: 11px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fcfcfc;
+    display: inline-block;
+
+}
+.search-results{
+    height: 350px;
+    width: 250px;
+    background-color: #24262C;
+    z-index: 5;
+    position: relative;
+    top: 5px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.clear-button{
+    color: red;
+    position: relative;
+    left: -50px;
+}
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+/* ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+} */

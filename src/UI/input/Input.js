@@ -5,7 +5,7 @@ import './input.css';
 const Input = (props) => {
     let formElement = null;
 
-    switch(props.elementType){
+    switch(props.elementtype){
         case('input'):
             formElement = <input 
                         {...props.config}
@@ -47,6 +47,7 @@ const Input = (props) => {
         <div>
             <label className='label-field'>{props.displaylabel}: </label><br/>
             {formElement}
+            
         </div>
      );
 }

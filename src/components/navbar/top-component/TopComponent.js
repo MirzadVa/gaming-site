@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from './login/Login';
-import Search from './search/Search';
+import Search from '../../../container/search-game/SearchGame';
 import './top-component.css';
 
 const TopComponent = () =>{

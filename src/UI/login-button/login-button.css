@@ -1,0 +1,13 @@
+.login-button{
+    width: 80px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: #0FC997;
+    color: #ffffff;
+    cursor: pointer;
+}
+.login-button:focus{
+    border: none;
+    outline: none;
+}

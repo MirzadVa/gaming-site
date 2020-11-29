@@ -11,3 +11,6 @@
 .submit-button-container:hover{
     border: 2px solid #0FC997;
 }
+.submit-button-container:focus{
+    outline: none;
+}
