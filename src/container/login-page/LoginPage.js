@@ -47,7 +47,7 @@ class LoginPage extends Component {
         let updatedLoginData = {...this.state.loginData};
         let updatedElement = updatedLoginData[key]
         updatedElement.value = e.target.value
-       this.setState({
+        this.setState({
            loginData: updatedLoginData
        })
         
@@ -60,8 +60,6 @@ class LoginPage extends Component {
        for(let user in this.state.loginData){
            data[user] = this.state.loginData[user].value
        }
-
-       
        for(let user in this.state.users){
            if((this.state.users[user].email === data.email && this.state.users[user].password === data.password) === true){
             this.setState({
@@ -73,10 +71,7 @@ class LoginPage extends Component {
            }
            
        }
-        
-    
-    
-    
+
     }
     
     render(){

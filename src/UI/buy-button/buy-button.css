@@ -36,8 +36,9 @@
     cursor: pointer;
     border-radius: 8px;
     font-family: 'Roboto', sans-serif;
-    margin-top: 10px;
     margin-left: 10px;
+    position: absolute;
+    top: 80%;
 }
 .release-cart{
     height: 20px;

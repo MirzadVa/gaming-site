@@ -15,7 +15,11 @@ class Register extends Component {
                     type: 'text',
                     displaylabel: 'Name'
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             surname: {
                 elementType: 'input',
@@ -23,7 +27,11 @@ class Register extends Component {
                     type: 'text',
                     displaylabel: 'Surname'
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             email: {
                 elementType: 'input',
@@ -31,7 +39,11 @@ class Register extends Component {
                     type: 'email',
                     displaylabel: 'Email'
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             password: {
                 elementType: 'input',
@@ -39,7 +51,11 @@ class Register extends Component {
                     type: 'password',
                     displaylabel: 'Password'
                 },
-                value: ''
+                value: '',
+                validation: {
+                    required: true
+                },
+                valid: false
             },
             country: {
                 elementType: 'input',
@@ -47,29 +63,70 @@ class Register extends Component {
                     type: 'text',
                     displaylabel: 'Country'
                 },
-                value: ''
-            },
-            gender: {
-                elementType: 'select',
-                elementConfig: {
-                    options: [
-                        {value: 'male', displayValue: 'Male'},
-                        {value: 'female', displayValue: 'Female'}
-                    ],
-                    displaylabel: 'Gender'
+                value: '',
+                validation: {
+                    required: true
                 },
-                value: ''
-            }
+                valid: false
+            },
+            // gender: {
+            //     elementType: 'select',
+            //     elementConfig: {
+            //         options: [
+            //             {value: 'male', displayValue: 'Male'},
+            //             {value: 'female', displayValue: 'Female'}
+            //         ],
+            //         displaylabel: 'Gender'
+            //     },
+            //     value: 'Male',
+            //     validation: {
+            //         required: false
+            //     },
+            //     valid: false
+            // },
+            
         },
-        users: null
+        users: null,
+        isRegistered: false,
+        registrationError: false
     }
     
 
+    checkValidity(value, rules){
+        let isValid = false;
+
+        if(rules.required){
+
+            isValid = value.trim() !== '';
+        }
+        
+
+        return isValid;
+    }
+    checkSubmitValid = () =>{
+        let submitValid = false
+        for(let formKey in this.state.formGroup){
+            if(this.state.formGroup[formKey].valid){
+                submitValid = true
+            }else{
+                submitValid = false
+            }
+        }
+    return submitValid;
+    
+    
+    
+    
+    };
+    
+    
     inputChangeHandler = (event, name) =>{
         let updatedFormGroup = {...this.state.formGroup};
         
         let updatedElement = updatedFormGroup[name];
         updatedElement.value = event.target.value
+        updatedElement.valid =  this.checkValidity(updatedElement.value, updatedElement.validation)
+        console.log(updatedElement);
         this.setState({
             formGroup : updatedFormGroup
         })
@@ -79,19 +136,35 @@ class Register extends Component {
     }
     registerSubmit = (e) =>{
         e.preventDefault();
-        let formData = {};
-        for(let formElement in this.state.formGroup){
-            formData[formElement] = this.state.formGroup[formElement].value
-        }
+        const submitValid = this.checkSubmitValid();
+        if(submitValid){
+             let formData = {};
+                for(let formElement in this.state.formGroup){
+                    console.log(formData[formElement] = this.state.formGroup[formElement].value)
+                }
         
         Axios.post('https://tutorial-1ce20.firebaseio.com/users.json', formData)
             .then(response =>{
+                this.setState({
+                    isRegistered : true
+                })
                 window.location.reload();
+                
                 
             })
             .catch(error =>{
                 console.log(error)
             })
+        }else{
+            this.setState({
+                registrationError : true
+            })
+        }
+        
+        
+        
+        
+       
         
             
     }
@@ -116,13 +189,16 @@ class Register extends Component {
                     displaylabel={inputElement.config.elementConfig.displaylabel}
                     config={inputElement.config.elementConfig}
                     change={(event) => this.inputChangeHandler(event, inputElement.id)}
-                    value={inputElement.config.value}/>
+                    value={inputElement.config.value}
+                    valid={inputElement.config.valid}/>
             })}
             <SubmitBtn btnType='submit'/>
         </form>)
         
-        
-        
+        let registrationError;
+        if(this.state.registrationError){
+            registrationError =(<p>Please fill out all fields</p>)
+        }
         
         return(
             <div className='register-container'>
@@ -135,7 +211,8 @@ class Register extends Component {
                 </div>
                 
                 <div className='form'>{form}</div>
-                
+                {/* {registrationError} */}
+                {this.state.isRegistered ? <Redirect to='/home'/> : null}
             </div>
 
             

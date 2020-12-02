@@ -3,21 +3,24 @@ import './search-game.css';
 import Axios from 'axios';
 import SearchResults from './search-results/SeachResults';
 import {Link} from 'react-router-dom';
+import SearchIcon from '../../assets/icons/search.svg';
 
 class SearchGame extends Component {
 
     state ={
-        searchResults: null
+        searchResults: null,
+        searchInput: false
     }
 
 
     searchInput = (e) =>{
-        if(e.target.value !== ''){
+        if(e.target.value.trim() !== ''){
             setTimeout(()=>{
                 Axios.get(`https://api.rawg.io/api/games?search=${e.target.value}`)
                     .then(response =>{
                         this.setState({
-                            searchResults : response.data.results
+                            searchResults : response.data.results,
+                            searchInput: true
                         })
                         
                     })
@@ -25,11 +28,14 @@ class SearchGame extends Component {
                         console.log(error)
                     })
                     
-            }, 3000)
+            }, 2000)
+            
         }else{
             this.setState({
-                searchResults : null
+                searchInput : false,
+                searchResults: null
             })
+            
         }
         }
     render(){
@@ -38,7 +44,7 @@ class SearchGame extends Component {
             searchResults = (
                 <div className='search-results'>
                     {this.state.searchResults.map(elem =>(
-                        <Link to={`/game/${elem.id}`} key={elem.id}>
+                        <Link to={`/game/${elem.id}`} key={elem.id} style={{textDecoration: 'none', color: '#ffffff'}}>
                             <SearchResults
                                 key={elem.id} 
                                 name={elem.name} 
@@ -46,7 +52,6 @@ class SearchGame extends Component {
                                 />
                         </Link>
                     ))}
-                    {console.log(this.state.searchResults)}
                 </div>
             )
         }
@@ -56,17 +61,15 @@ class SearchGame extends Component {
         return(
             <div>
                 <div className='search-container'>
-                    {/* <span className='select-genre'>All </span> */}
                     <input 
                         type='text' 
                         className='search-input' 
                         placeholder='Search entire store here...'
                         onChange={this.searchInput}/>
-                    <button className='search-button'>Search</button>
-                    {searchResults}
+                        <img src={SearchIcon} className='search-icon'/>
+                    {this.state.searchInput ? searchResults : null}
 
                 </div>
-                {/* <button onClick={this.clearState} className='clear-button'>clear</button> */}
 
         </div>
         )

@@ -4,6 +4,12 @@ import './input.css';
 
 const Input = (props) => {
     let formElement = null;
+    let inputClasses=['input-field']
+
+    if(!props.valid){
+        inputClasses.push('invalid-input')
+        console.log(inputClasses)
+    }
 
     switch(props.elementtype){
         case('input'):
@@ -11,14 +17,14 @@ const Input = (props) => {
                         {...props.config}
                         onChange={props.change}
                         value={props.value}
-                        className='input-field'/>
+                        className={inputClasses.join(' ')}/>
             break;
         case('textarea'):
             formElement = <textarea 
                         {...props.config}
                         onChange={props.change}
                         value={props.value}
-                        className='input-field'/>
+                        className={inputClasses.join(' ')}/>
             break;
         case('select'):
             formElement = <select

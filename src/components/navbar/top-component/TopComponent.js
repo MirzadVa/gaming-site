@@ -1,6 +1,6 @@
 import React from 'react';
-import Login from './login/Login';
 import Search from '../../../container/search-game/SearchGame';
+import Login from './login/Login';
 import './top-component.css';
 
 const TopComponent = () =>{
@@ -10,6 +10,7 @@ const TopComponent = () =>{
         <div className='top-component-container'>
             <Search />
             <Login />
+            
         </div>
     )
 }

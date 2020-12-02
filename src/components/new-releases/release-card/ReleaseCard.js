@@ -1,6 +1,5 @@
 import React from 'react';
 import './release-card.css';
-import BuyButton from '../../../UI/buy-button/BuyButton';
 
 const ReleaseCard = (props) => {
 
@@ -15,7 +14,7 @@ const ReleaseCard = (props) => {
         <div className='release-card' style={style}>
             <p className='release-name'>{props.name}</p> <br />
             <p className='release-description'>{props.description}</p>
-            <BuyButton title='Buy now' class='release-button' cartClass='release-cart'/>
+           
         </div>
      );
 }

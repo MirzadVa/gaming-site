@@ -44,3 +44,7 @@
     margin-bottom: 20px
 
 }
+.invalid-input{
+    border: 1px solid red;
+    background-color: #e4414195;
+}

@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import ReleaseCard from './release-card/ReleaseCard';
 import ViewMoreButton from '../../UI/view-more-button/ViewMoreButton';
 import { Link } from 'react-router-dom';
+import BuyButton from '../../UI/buy-button/BuyButton';
 
 
 const NewReleases = (props) => {
@@ -27,13 +28,17 @@ const NewReleases = (props) => {
             <Slider {...settings} className='releases-slider'>
                 
                 {props.games.map(game => {
-                    return (<Link style={{ textDecoration: 'none' }} key={game.id} to={`/game/${game.id}`}>
-                    <ReleaseCard
-                                id={game.id} 
-                                name={game.name}
-                                image={game.background_image}
-                                description='Aliquip fugiat officia irure occaecat reprehenderit sint in occaecat occaecat.'/>
-                            </Link> )
+                    return (
+                        <div>
+                            <ReleaseCard
+                                    id={game.id} 
+                                    name={game.name}
+                                    image={game.background_image}
+                                    description='Aliquip fugiat officia irure occaecat reprehenderit sint in occaecat occaecat.'/>
+                                <Link  key={game.id} to={`/game/${game.id}`}>
+                                    <BuyButton title='Buy now' class='release-button' cartClass='release-cart'/>
+                                </Link> 
+                        </div>)
                 })}
             </Slider>
             

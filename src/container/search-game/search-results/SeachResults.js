@@ -1,6 +1,5 @@
 import React from 'react';
 import './search-results.css'
-import wd2 from '../../../assets/images/wd2.jpg'
 
 const SearchResults = (props) => {
     return ( 
